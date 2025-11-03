@@ -5,17 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -51,10 +48,16 @@
                </HBox.margin>
             </Label>
             <Region prefHeight="0.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-            <Button alignment="CENTER" mnemonicParsing="false" text="New Section">
+            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-radius: 15; -fx-border-color: 5b5b5b; -fx-border-radius: 15;" text="New Section" textAlignment="CENTER">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="8.0" right="8.0" top="5.0" />
+               </padding>
             </Button>
          </children>
       </HBox>
@@ -62,23 +65,11 @@
          <children>
             <BorderPane style="-fx-border-color: #000000; -fx-background-color: #f5f5f5;" HBox.hgrow="ALWAYS">
                <top>
-                  <Label text="Lions" BorderPane.alignment="CENTER" />
+                  <Label text="Lions" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                </top>
-               <bottom>
-                  <MenuButton mnemonicParsing="false" text="Section" BorderPane.alignment="CENTER">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="View" />
-                      <MenuItem mnemonicParsing="false" text="Edit" />
-                    </items>
-                  </MenuButton>
-               </bottom>
-               <center>
-                  <ImageView fitHeight="134.0" fitWidth="196.0" pickOnBounds="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@lion.jpg" />
-                     </image>
-                  </ImageView>
-               </center>
                <HBox.margin>
                   <Insets left="2.0" right="2.0" />
                </HBox.margin>
@@ -88,26 +79,24 @@
                <padding>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
+               <center>
+                  <Pane minHeight="100.0" minWidth="200.0" style="-fx-background-color: #967405;" BorderPane.alignment="CENTER" />
+               </center>
+               <bottom>
+                  <Button mnemonicParsing="false" text="View" BorderPane.alignment="CENTER_LEFT">
+                     <BorderPane.margin>
+                        <Insets bottom="2.0" left="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
             </BorderPane>
             <BorderPane layoutX="10.0" layoutY="10.0" style="-fx-border-color: #000000; -fx-background-color: #f5f5f5;" HBox.hgrow="ALWAYS">
                <top>
-                  <Label text="Tigers" BorderPane.alignment="CENTER" />
+                  <Label text="Tigers" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                </top>
-               <bottom>
-                  <MenuButton mnemonicParsing="false" text="Section" BorderPane.alignment="CENTER">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="View" />
-                        <MenuItem mnemonicParsing="false" text="Edit" />
-                     </items>
-                  </MenuButton>
-               </bottom>
-               <center>
-                  <ImageView fitHeight="134.0" fitWidth="196.0" pickOnBounds="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@tiger.jpg" />
-                     </image>
-                  </ImageView>
-               </center>
                <HBox.margin>
                   <Insets left="2.0" right="2.0" />
                </HBox.margin>
@@ -117,26 +106,27 @@
                <effect>
                   <DropShadow />
                </effect>
+               <center>
+                  <Pane minHeight="100.0" minWidth="200.0" style="-fx-background-color: ce760a;" BorderPane.alignment="CENTER" />
+               </center>
+               <bottom>
+                  <Button mnemonicParsing="false" text="View" BorderPane.alignment="CENTER_LEFT">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <BorderPane.margin>
+                        <Insets bottom="2.0" left="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
             </BorderPane>
             <BorderPane layoutX="212.0" layoutY="10.0" style="-fx-border-color: #000000; -fx-background-color: #f5f5f5;" HBox.hgrow="ALWAYS">
                <top>
-                  <Label text="Cougars" BorderPane.alignment="CENTER" />
+                  <Label text="Cougars" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                </top>
-               <bottom>
-                  <MenuButton mnemonicParsing="false" text="Section" BorderPane.alignment="CENTER">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="View" />
-                        <MenuItem mnemonicParsing="false" text="Edit" />
-                     </items>
-                  </MenuButton>
-               </bottom>
-               <center>
-                  <ImageView fitHeight="134.0" fitWidth="196.0" pickOnBounds="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@cougar.jpg" />
-                     </image>
-                  </ImageView>
-               </center>
                <HBox.margin>
                   <Insets left="2.0" right="2.0" />
                </HBox.margin>
@@ -146,6 +136,16 @@
                <effect>
                   <DropShadow />
                </effect>
+               <center>
+                  <Pane minHeight="100.0" minWidth="200.0" style="-fx-background-color: C2B280;" BorderPane.alignment="CENTER" />
+               </center>
+               <bottom>
+                  <Button mnemonicParsing="false" text="View" BorderPane.alignment="CENTER_LEFT">
+                     <BorderPane.margin>
+                        <Insets bottom="2.0" left="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
             </BorderPane>
          </children>
          <VBox.margin>
