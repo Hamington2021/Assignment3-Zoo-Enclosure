@@ -6,20 +6,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zoostructure.Controllers.CompositeEnclosureController">
+<VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zoostructure.Controllers.CompositeEnclosureViewController">
    <children>
-      <MenuBar VBox.vgrow="ALWAYS">
-        <menus>
-          <Menu fx:id="homeMenuButton" mnemonicParsing="false" text="Home" />
-          <Menu mnemonicParsing="false" text="Big Cats">
-            <items>
-              <MenuItem fx:id="lionMenuItem" mnemonicParsing="false" text="Lions" />
-                  <MenuItem fx:id="tigerMenuItem" mnemonicParsing="false" text="Tigers" />
-                  <MenuItem fx:id="cougarMenuItem" mnemonicParsing="false" text="Cougars" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
       <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
          <children>
             <Label fx:id="sectionNameLabel" text="Big Cats">
