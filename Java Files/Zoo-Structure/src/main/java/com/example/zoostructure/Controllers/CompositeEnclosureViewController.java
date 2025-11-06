@@ -1,6 +1,7 @@
 package com.example.zoostructure.Controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -24,6 +25,12 @@ public class CompositeEnclosureViewController {
 
     @FXML
     protected void onLionViewButtonClick() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LionView.fxml"));
+        try {
+            fxmlLoader.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
