@@ -1,4 +1,4 @@
-import com.example.zoostructure.Model.Animal;
+package com.example.zoostructure.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,14 +13,14 @@ import java.util.List;
         private List<Animal> animals;
 
         /**
-         * Constructs an {@code Enclosure} with the specified name.
+         * Constructs an {@code com.example.zoostructure.Model.Enclosure} with the specified name.
          *
          * @param name the name of the enclosure
          * @throws IllegalArgumentException if name is null or empty
          */
         public Enclosure(String name) {
             if (name == null || name.trim().isEmpty()) {
-                throw new IllegalArgumentException("Enclosure name cannot be null or empty.");
+                throw new IllegalArgumentException("com.example.zoostructure.Model.Enclosure name cannot be null or empty.");
             }
             this.name = name;
             this.animals = new ArrayList<>();
@@ -47,7 +47,7 @@ import java.util.List;
 
         @Override
         public void displayInfo() {
-            System.out.println("Enclosure: " + name);
+            System.out.println("com.example.zoostructure.Model.Enclosure: " + name);
             for (Animal animal : animals) {
                 System.out.println("  - " + animal.getName() + " (" + animal.getAge() + " years)");
             }
