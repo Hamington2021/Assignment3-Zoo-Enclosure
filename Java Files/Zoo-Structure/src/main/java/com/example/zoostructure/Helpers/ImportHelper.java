@@ -75,7 +75,8 @@ public class ImportHelper {
         cubs.addAnimal(new Tiger("Indra", 0));
 
         // --- Composite for all tigers ---
-        CompositeEnclosureCollection tigers = new CompositeEnclosureCollection("Tigers");
+        CompositeEnclosureCollection tigers =
+                new CompositeEnclosureCollection("Tigers");
         tigers.addCollection(tigerHabitat);
         tigers.addCollection(cubs);
 
