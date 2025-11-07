@@ -43,7 +43,7 @@ public class Enclosure {
         }
 
         @Override
-        public void displayInfo() {
+        public void display() {
             System.out.println("com.example.zoostructure.Model.Enclosure: " + name);
             for (Animal animal : animals) {
                 System.out.println("  - " + animal.getName() + " (" + animal.getAge() + " years)");
