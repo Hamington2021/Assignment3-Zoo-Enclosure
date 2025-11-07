@@ -32,28 +32,28 @@ public class ImportHelper {
      * <p>The resulting hierarchy looks like this:</p>
      * <pre>
      * Big Cats
-     * +-- Lions
-     * �   +-- Simba (3 years)
-     * �   +-- Mufasa (8 years)
-     * �   +-- Nala (3 years)
-     * +-- Tigers
-     * �   +-- Tigers Habitat
-     * �   �   +-- Shere Kahn (3 years)
-     * �   �   +-- Rajah (3 years)
-     * �   +-- Tiger Cubs
-     * �       +-- Tala (5 years)
-     * �       +-- Ravi (0 years)
-     * �       +-- Kali (0 years)
-     * �       +-- Indra (0 years)
-     * +-- Cougars
-     *     +-- Sierra (3 years)
-     *     +-- Rocky (3 years)
-     *     +-- Luna (2 years)
-     *     +-- Lenny (1 year)
+     * ├── Lions
+     * │   ├── Simba (3 years)
+     * │   ├── Mufasa (8 years)
+     * │   └── Nala (3 years)
+     * ├── Tigers
+     * │   ├── Tigers Habitat
+     * │   │   ├── Shere Kahn (3 years)
+     * │   │   └── Rajah (3 years)
+     * │   └── Tiger Cubs
+     * │       ├── Tala (5 years)
+     * │       ├── Ravi (0 years)
+     * │       ├── Kali (0 years)
+     * │       └── Indra (0 years)
+     * └── Cougars
+     *     ├── Sierra (3 years)
+     *     ├── Rocky (3 years)
+     *     ├── Luna (2 years)
+     *     └── Lenny (1 year)
      * </pre>
      *
      * @return a fully populated {@link CompositeEnclosureCollection} representing
-     *         the �Big Cats� section of the zoo
+     *         the “Big Cats” section of the zoo
      */
     public static CompositeEnclosureCollection createAnimals() {
         // --- Lions enclosure ---
@@ -75,7 +75,12 @@ public class ImportHelper {
         cubs.addAnimal(new Tiger("Indra", 0));
 
         // --- Composite for all tigers ---
+<<<<<<< HEAD
+        CompositeEnclosureCollection tigers =
+                new CompositeEnclosureCollection("Tigers");
+=======
         CompositeEnclosureCollection tigers = new CompositeEnclosureCollection("Tigers");
+>>>>>>> parent of bd0f2bd (Risk)
         tigers.addCollection(tigerHabitat);
         tigers.addCollection(cubs);
 
