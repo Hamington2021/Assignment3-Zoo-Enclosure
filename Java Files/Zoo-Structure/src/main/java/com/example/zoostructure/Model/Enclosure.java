@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Enclosure {
-import java.util.ArrayList;
-import java.util.List;
-
 
     public class Enclosure implements EnclosureCollection{
         private String name;
