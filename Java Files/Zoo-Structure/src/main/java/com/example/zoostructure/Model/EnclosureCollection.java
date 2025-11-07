@@ -16,13 +16,9 @@ public interface EnclosureCollection {
      * Adds an enclosure to this collection.
      * @param enclosure the enclosure to add
      */
-    void add(EnclosureCollection enclosure);
+    void addCollection(EnclosureCollection enclosure);
 
-    /**
-     * Removes an enclosure from this collection.
-     * @param enclosure the enclosure to remove
-     */
-    void remove(EnclosureCollection enclosure);
+    void removeCollection(EnclosureCollection enclosure);
 
     /**
      * Displays the enclosure.
