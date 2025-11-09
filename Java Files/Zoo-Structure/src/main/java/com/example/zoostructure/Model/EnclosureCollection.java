@@ -12,13 +12,13 @@ public interface EnclosureCollection {
      */
     String getName();
 
-    /**
-     * Adds an enclosure to this collection.
-     * @param enclosure the enclosure to add
-     */
-    void addCollection(EnclosureCollection enclosure);
-
-    void removeCollection(EnclosureCollection enclosure);
+//    /**
+//     * Adds an enclosure to this collection.
+//     * @param enclosure the enclosure to add
+//     */
+//    void addCollection(EnclosureCollection enclosure);
+//
+//    void removeCollection(EnclosureCollection enclosure);
 
     /**
      * Displays the enclosure.

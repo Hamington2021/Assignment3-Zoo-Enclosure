@@ -5,7 +5,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 
-public class AnimalViewC {
+public class AnimalViewController {
     @FXML
     private ChoiceBox<String> aTypeChoiceBox;
 
