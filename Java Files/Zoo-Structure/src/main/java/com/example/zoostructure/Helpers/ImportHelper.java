@@ -32,56 +32,55 @@ public class ImportHelper {
      * <p>The resulting hierarchy looks like this:</p>
      * <pre>
      * Big Cats
-     * +-- Lions
-     * �   +-- Simba (3 years)
-     * �   +-- Mufasa (8 years)
-     * �   +-- Nala (3 years)
-     * +-- Tigers
-     * �   +-- Tigers Habitat
-     * �   �   +-- Shere Kahn (3 years)
-     * �   �   +-- Rajah (3 years)
-     * �   +-- Tiger Cubs
-     * �       +-- Tala (5 years)
-     * �       +-- Ravi (0 years)
-     * �       +-- Kali (0 years)
-     * �       +-- Indra (0 years)
-     * +-- Cougars
-     *     +-- Sierra (3 years)
-     *     +-- Rocky (3 years)
-     *     +-- Luna (2 years)
-     *     +-- Lenny (1 year)
+     * ├── Lions
+     * │   ├── Simba (3 years)
+     * │   ├── Mufasa (8 years)
+     * │   └── Nala (3 years)
+     * ├── Tigers
+     * │   ├── Tigers Habitat
+     * │   │   ├── Shere Kahn (3 years)
+     * │   │   └── Rajah (3 years)
+     * │   └── Tiger Cubs
+     * │       ├── Tala (5 years)
+     * │       ├── Ravi (0 years)
+     * │       ├── Kali (0 years)
+     * │       └── Indra (0 years)
+     * └── Cougars
+     *     ├── Sierra (3 years)
+     *     ├── Rocky (3 years)
+     *     ├── Luna (2 years)
+     *     └── Lenny (1 year)
      * </pre>
      *
      * @return a fully populated {@link CompositeEnclosureCollection} representing
-     *         the �Big Cats� section of the zoo
+     *         the “Big Cats” section of the zoo
      */
     public static CompositeEnclosureCollection createAnimals() {
         // --- Lions enclosure ---
-        Enclosure lions = new Enclosure();
+        Enclosure lions = new Enclosure("Lions");
         lions.addAnimal(new Lion("Simba", 3));
         lions.addAnimal(new Lion("Mufasa", 8));
         lions.addAnimal(new Lion("Nala", 3));
 
         // --- Tiger habitat enclosure ---
-        Enclosure tigerHabitat = new Enclosure();
+        Enclosure tigerHabitat = new Enclosure("Tigers Habitat");
         tigerHabitat.addAnimal(new Tiger("Shere Kahn", 3));
         tigerHabitat.addAnimal(new Tiger("Rajah", 3));
 
         // --- Tiger cubs enclosure ---
-        Enclosure cubs = new Enclosure();
+        Enclosure cubs = new Enclosure("Tiger Cubs");
         cubs.addAnimal(new Tiger("Tala", 5));
         cubs.addAnimal(new Tiger("Ravi", 0));
         cubs.addAnimal(new Tiger("Kali", 0));
         cubs.addAnimal(new Tiger("Indra", 0));
 
         // --- Composite for all tigers ---
-        CompositeEnclosureCollection tigers =
-                new CompositeEnclosureCollection("Tigers");
+        CompositeEnclosureCollection tigers = new CompositeEnclosureCollection("Tigers");
         tigers.addCollection(tigerHabitat);
         tigers.addCollection(cubs);
 
         // --- Cougars enclosure ---
-        Enclosure cougarsEnclosure = new Enclosure();
+        Enclosure cougarsEnclosure = new Enclosure("Cougars");
         cougarsEnclosure.addAnimal(new Cougar("Sierra", 3));
         cougarsEnclosure.addAnimal(new Cougar("Rocky", 3));
         cougarsEnclosure.addAnimal(new Cougar("Luna", 2));

@@ -1,0 +1,115 @@
+package com.example.zoostructure.Model;
+
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+import java.util.List;
+
+/**
+ * CompositeEnclosureCollection represents a group of enclosures, which
+<<<<<<< HEAD
+ * can be other composite enclosures or individual enclosures.\
+=======
+ * can be other composite enclosures or individual enclosures.
+ * Implements the EnclosureCollection interface.
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+ * @author Serena
+ */
+public class CompositeEnclosureCollection implements EnclosureCollection {
+
+<<<<<<< HEAD
+    /**
+     * The name of the enclosure.
+     */
+    private final String aName;
+
+    /**
+     * The list of enclosures.
+     */
+    private final List<EnclosureCollection> aEnclosures;
+
+    /**
+     * Returns the name of the enclosure.
+     *
+     * @return the name of this enclosure
+     */
+=======
+    private final String aName;
+    private final List<EnclosureCollection> aEnclosures;
+
+    public CompositeEnclosureCollection(String pName) {
+        this.aName = pName;
+        this.aEnclosures = new ArrayList<>();
+    }
+
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+    public String getName() {
+        return aName;
+    }
+
+<<<<<<< HEAD
+    public CompositeEnclosureCollection(String pName, List<EnclosureCollection> pEnclosures) {
+        this.aName = pName;
+        this.aEnclosures = pEnclosures;
+    }
+
+    /**
+     * Adds an enclosure to this collection.
+     *
+     * @param pEnclosure the enclosure to add
+     */
+=======
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+    @Override
+    public void addCollection(EnclosureCollection pEnclosure) {
+        aEnclosures.add(pEnclosure);
+    }
+
+<<<<<<< HEAD
+    /**
+     * Removes an enclosure from this collection.
+     *
+     * @param pEnclosure the enclosure to remove
+     */
+=======
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+    @Override
+    public void removeCollection(EnclosureCollection pEnclosure) {
+        aEnclosures.remove(pEnclosure);
+    }
+
+<<<<<<< HEAD
+    /**
+     * Displays the enclosure.
+     */
+=======
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+    @Override
+    public void display() {
+        display("");
+    }
+
+<<<<<<< HEAD
+    /**
+     * Recursively displays the enclosure hierarchy with indentation.
+     *
+     * @param pIndent the indentation prefix for nested levels
+     */
+=======
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+    public void display(String pIndent) {
+        System.out.println(pIndent + aName);
+        for (EnclosureCollection enclosure : aEnclosures) {
+            if (enclosure instanceof CompositeEnclosureCollection) {
+                ((CompositeEnclosureCollection) enclosure).display(pIndent + "  ");
+            } else {
+                enclosure.display(); // assumes leaf nodes handle their own display
+            }
+        }
+    }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
+}
