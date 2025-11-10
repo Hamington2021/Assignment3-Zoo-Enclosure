@@ -28,9 +28,9 @@ public class CompositeEnclosureCollection implements EnclosureCollection {
         return aName;
     }
 
-    public CompositeEnclosureCollection(String pName, List<EnclosureCollection> pEnclosures) {
+    public CompositeEnclosureCollection(String pName) {
         this.aName = pName;
-        this.aEnclosures = pEnclosures;
+        aEnclosures = List.of();
     }
 
     /**

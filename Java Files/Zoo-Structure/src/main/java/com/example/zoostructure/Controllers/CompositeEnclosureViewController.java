@@ -1,6 +1,5 @@
 package com.example.zoostructure.Controllers;
 
-<<<<<<< HEAD
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -44,8 +43,4 @@ public class CompositeEnclosureViewController {
     protected void onCougarViewButtonClick() {
 
     }
-
-=======
-public class CompositeEnclosureViewController {
->>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
 }
