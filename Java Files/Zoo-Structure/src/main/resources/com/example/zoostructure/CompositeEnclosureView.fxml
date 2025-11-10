@@ -54,7 +54,7 @@
                   <Pane minHeight="100.0" minWidth="200.0" style="-fx-background-color: #967405;" BorderPane.alignment="CENTER" />
                </center>
                <bottom>
-                  <Button fx:id="lionViewButton" mnemonicParsing="false" text="View" BorderPane.alignment="CENTER_LEFT">
+                  <Button fx:id="lionViewButton" mnemonicParsing="false" onAction="#onLionViewButtonClick" text="View" BorderPane.alignment="CENTER_LEFT">
                      <BorderPane.margin>
                         <Insets bottom="2.0" left="5.0" top="5.0" />
                      </BorderPane.margin>
@@ -81,7 +81,7 @@
                   <Pane minHeight="100.0" minWidth="200.0" style="-fx-background-color: ce760a;" BorderPane.alignment="CENTER" />
                </center>
                <bottom>
-                  <Button fx:id="tigerViewButton" mnemonicParsing="false" text="View" BorderPane.alignment="CENTER_LEFT">
+                  <Button fx:id="tigerViewButton" mnemonicParsing="false" onAction="#onTigerViewButtonClick" text="View" BorderPane.alignment="CENTER_LEFT">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -111,7 +111,7 @@
                   <Pane minHeight="100.0" minWidth="200.0" style="-fx-background-color: C2B280;" BorderPane.alignment="CENTER" />
                </center>
                <bottom>
-                  <Button fx:id="cougarViewButton" mnemonicParsing="false" text="View" BorderPane.alignment="CENTER_LEFT">
+                  <Button fx:id="cougarViewButton" mnemonicParsing="false" onAction="#onCougarViewButtonClick" text="View" BorderPane.alignment="CENTER_LEFT">
                      <BorderPane.margin>
                         <Insets bottom="2.0" left="5.0" top="5.0" />
                      </BorderPane.margin>
