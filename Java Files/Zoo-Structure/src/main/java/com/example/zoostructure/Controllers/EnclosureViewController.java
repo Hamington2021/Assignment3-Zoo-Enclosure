@@ -65,7 +65,7 @@ public class EnclosureViewController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/zoostructure/View/AddAnimalView.fxml"));
             Parent root = loader.load();
 
-            AnimalViewC controller = loader.getController();
+            AnimalViewController controller = loader.getController();
             controller.setEnclosure(enclosure);
             controller.setEnclosureViewController(this);
 
