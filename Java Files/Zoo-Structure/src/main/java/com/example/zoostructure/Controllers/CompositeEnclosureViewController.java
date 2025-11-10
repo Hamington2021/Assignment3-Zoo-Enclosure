@@ -1,10 +1,15 @@
 package com.example.zoostructure.Controllers;
 
-<<<<<<< HEAD
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class CompositeEnclosureViewController {
 
@@ -25,27 +30,40 @@ public class CompositeEnclosureViewController {
     }
 
     @FXML
-    protected void onLionViewButtonClick() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LionView.fxml"));
-        try {
-            fxmlLoader.load();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    protected void onLionViewButtonClick() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/zoostructure/Enclosure-view.fxml"));
+        Parent root = loader.load();
 
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL); // 🔒 Makes it modal
+        stage.setTitle("Lion Enclosure");
+        stage.setScene(new Scene(root));
+        stage.showAndWait(); // ⏳ Blocks until the window is closed
     }
 
     @FXML
-    protected void onTigerViewButtonClick() {
+    protected void onTigerViewButtonClick() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/zoostructure/Enclosure-view.fxml"));
+        Parent root = loader.load();
 
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL); // 🔒 Makes it modal
+        stage.setTitle("Tiger Enclosure");
+        stage.setScene(new Scene(root));
+        stage.showAndWait(); // ⏳ Blocks until the window is closed
     }
+
 
     @FXML
-    protected void onCougarViewButtonClick() {
+    protected void onCougarViewButtonClick() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/zoostructure/Enclosure-view.fxml"));
+        Parent root = loader.load();
 
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL); // 🔒 Makes it modal
+        stage.setTitle("Cougar Enclosure");
+        stage.setScene(new Scene(root));
+        stage.showAndWait(); // ⏳ Blocks until the window is closed
     }
-
-=======
-public class CompositeEnclosureViewController {
->>>>>>> 373f9879d45aa19580b63bcca7e80072eb5983a7
 }
+
