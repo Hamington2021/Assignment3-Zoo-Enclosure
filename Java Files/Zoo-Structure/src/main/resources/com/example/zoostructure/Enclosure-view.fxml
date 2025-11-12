@@ -18,6 +18,7 @@
                   <Button fx:id="deleteButton" layoutX="265.0" layoutY="213.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
                   <Button fx:id="backButton" layoutX="27.0" layoutY="257.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
                   <Label fx:id="animalLabel" layoutX="27.0" layoutY="14.0" text="Label" />
+                  <Button fx:id="editButton" layoutX="264.0" layoutY="113.0" mnemonicParsing="false" onAction="#onEditButtonClick" text="Edit" />
                </children>
             </AnchorPane>
         </items>

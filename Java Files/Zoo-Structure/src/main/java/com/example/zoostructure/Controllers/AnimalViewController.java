@@ -85,4 +85,5 @@ public class AnimalViewController {
     public void setEnclosure(Enclosure pEnclosure) {
         this.aEnclosure = pEnclosure;
     }
+
 }

@@ -27,6 +27,9 @@ public class EnclosureViewController {
     @FXML
     private Button addButton;
 
+    @FXML
+    private Button editButton;
+
     private Enclosure enclosure;
 
     public void setEnclosure(Enclosure enclosure) {
@@ -80,6 +83,32 @@ public class EnclosureViewController {
         }
     }
 
+    @FXML
+    protected void onEditButtonClick() {
+        Animal selected = animalList.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("animal-view.fxml"));
+                Parent root = loader.load();
+
+                AnimalViewController controller = loader.getController();
+
+                Stage stage = new Stage();
+                stage.setTitle("Edit/View Animal");
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setScene(new Scene(root));
+                stage.show();
+
+                controller.setAnimal(selected);
+                controller.setEnclosure(enclosure);
+
+                stage.setOnHidden(event -> refreshAnimalList());
+            } catch (Exception e){
+                System.err.println("Error loading Edit/View Animal:");
+                e.printStackTrace();
+            }
+        }
+    }
     public void refreshAnimalList() {
         animalList.getItems().setAll(enclosure.getAnimals());
     }
