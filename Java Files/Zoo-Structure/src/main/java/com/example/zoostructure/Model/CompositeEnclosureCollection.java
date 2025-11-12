@@ -1,5 +1,6 @@
 package com.example.zoostructure.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,8 +21,15 @@ public class CompositeEnclosureCollection implements EnclosureCollection {
     private final List<EnclosureCollection> aEnclosures;
 
     /**
+     * Returns a safe, unmodifiable copy of the list of enclosures.
+     * @return a {@code List} of {@link EnclosureCollection} objects.
+     */
+    public List<EnclosureCollection> getCollections() {
+        return aEnclosures;
+    }
+
+    /**
      * Returns the name of the enclosure.
-     *
      * @return the name of this enclosure
      */
     public String getName() {
@@ -30,12 +38,11 @@ public class CompositeEnclosureCollection implements EnclosureCollection {
 
     public CompositeEnclosureCollection(String pName) {
         this.aName = pName;
-        aEnclosures = List.of();
+        aEnclosures = new ArrayList<>();
     }
 
     /**
      * Adds an enclosure to this collection.
-     *
      * @param pEnclosure the enclosure to add
      */
     @Override
@@ -45,7 +52,6 @@ public class CompositeEnclosureCollection implements EnclosureCollection {
 
     /**
      * Removes an enclosure from this collection.
-     *
      * @param pEnclosure the enclosure to remove
      */
     @Override
@@ -63,7 +69,6 @@ public class CompositeEnclosureCollection implements EnclosureCollection {
 
     /**
      * Recursively displays the enclosure hierarchy with indentation.
-     *
      * @param pIndent the indentation prefix for nested levels
      */
     public void display(String pIndent) {
