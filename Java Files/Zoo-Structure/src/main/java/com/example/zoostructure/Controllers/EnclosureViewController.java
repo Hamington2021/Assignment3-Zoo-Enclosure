@@ -62,12 +62,11 @@ public class EnclosureViewController {
     @FXML
     protected void onAddButtonClick() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/zoostructure/View/AddAnimalView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("animal-view.fxml"));
             Parent root = loader.load();
 
             AnimalViewController controller = loader.getController();
             controller.setEnclosure(enclosure);
-            controller.setEnclosureViewController(this);
 
             Stage stage = new Stage();
             stage.setTitle("Add Animal");
