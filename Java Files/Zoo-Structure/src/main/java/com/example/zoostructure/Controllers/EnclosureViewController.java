@@ -1,5 +1,6 @@
 package com.example.zoostructure.Controllers;
 
+import com.example.zoostructure.HelloApplication;
 import com.example.zoostructure.Model.Animal;
 import com.example.zoostructure.Model.Enclosure;
 import javafx.fxml.FXML;
@@ -88,7 +89,7 @@ public class EnclosureViewController {
         Animal selected = animalList.getSelectionModel().getSelectedItem();
         if (selected != null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("animal-view.fxml"));
+                FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("animal-view.fxml"));
                 Parent root = loader.load();
 
                 AnimalViewController controller = loader.getController();
@@ -97,10 +98,9 @@ public class EnclosureViewController {
                 stage.setTitle("Edit/View Animal");
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.setScene(new Scene(root));
-                stage.show();
-
                 controller.setAnimal(selected);
                 controller.setEnclosure(enclosure);
+                stage.show();
 
                 stage.setOnHidden(event -> refreshAnimalList());
             } catch (Exception e){
