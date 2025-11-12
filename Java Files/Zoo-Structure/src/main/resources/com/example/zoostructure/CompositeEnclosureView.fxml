@@ -18,7 +18,7 @@
                </HBox.margin>
             </Label>
             <Region prefHeight="0.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-            <Button fx:id="newSectionButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-radius: 15; -fx-border-color: 5b5b5b; -fx-border-radius: 15;" text="Home" textAlignment="CENTER">
+            <Button fx:id="backButton" alignment="CENTER" mnemonicParsing="false" onAction="#onBackButtonClick" style="-fx-background-radius: 15; -fx-border-color: 5b5b5b; -fx-border-radius: 15;" text="Back" textAlignment="CENTER">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
