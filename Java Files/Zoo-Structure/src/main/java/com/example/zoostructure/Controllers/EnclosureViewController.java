@@ -66,7 +66,7 @@ public class EnclosureViewController {
     @FXML
     protected void onAddButtonClick() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("animal-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("animal-view.fxml"));
             Parent root = loader.load();
 
             AnimalViewController controller = loader.getController();
@@ -77,6 +77,7 @@ public class EnclosureViewController {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(new Scene(root));
             stage.showAndWait();
+            refreshAnimalList();
 
         } catch (Exception e) {
             System.err.println("Error loading Add Animal View:");
